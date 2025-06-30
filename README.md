@@ -1,5 +1,5 @@
 # 🌐Portfolio Website
-https://github.com/aditibelwal007/portfolio-/blob/main/img.png?raw=true
+![image](https://github.com/user-attachments/assets/f0cb313e-f600-496b-9339-2ef7f68bc097)
 This is a responsive and interactive **Personal Portfolio Website** designed to showcase my skills, projects, and services as a software programmer. Built using **HTML, CSS, and JavaScript**, the website is aimed at creating a strong online presence and sharing my journey as a BTech CSE (AI & ML) student.
 
 ---
