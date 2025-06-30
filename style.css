@@ -1,0 +1,847 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #001a2c;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #000d1a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: cyan;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+  /* optional: make it circular */
+}
+
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 18px;
+  transition: 0.3s;
+
+}
+
+.navbar a:hover {
+  color: cyan;
+}
+
+
+
+/* Home Section */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+}
+
+.home-content {
+  max-width: 500px;
+}
+
+.home-content h1 {
+  font-size: 48px;
+  color: cyan;
+}
+
+.home-content h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.home-content h3 span {
+  color: #0ef;
+}
+
+.home-content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: cyan;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 10px;
+
+}
+
+.home-img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid cyan;
+  box-shadow: 0 0 30px cyan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* About Section */
+.about {
+  display: flex;
+  align-items: center;
+  padding: 60px 50px;
+  gap: 30px;
+}
+
+/*   
+  .about-img img {
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px cyan;
+  } */
+.about-img img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px cyan;
+}
+
+
+.about-text h2 {
+  font-size: 36px;
+}
+
+.about-text span {
+  color: cyan;
+}
+
+.about-text p {
+  margin-top: 15px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* Services Section */
+.services {
+  text-align: center;
+  padding: 60px 50px;
+
+}
+
+.heading span {
+  color: #0ef;
+}
+
+.services-container .service-box i {
+  font-size: 100px;
+  /* Adjust this value as needed */
+  margin-right: 200px;
+  margin-bottom: 20px;
+  /* Optional: adds space between icon and heading */
+  display: inline-block;
+}
+
+.services-container .service-box h3 {
+  margin-bottom: 20px;
+  /* Adjust this value as needed */
+}
+
+.services .heading {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.service span {
+  color: cyan;
+}
+
+.services .services-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 30px;
+}
+
+.service-box {
+  background: #003344;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #008080;
+  width: 350px;
+  height: 400px;
+  box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8f7;
+
+}
+
+
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #0ef;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px transparent;
+  margin-top: 25px;
+  /* <-- This adds space between <p> and button */
+
+}
+
+.btn:hover {
+  box-shadow: 0 0 10px #0ef, 0 0 20px #0ef, 0 0 30px #0ef;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* skills section */
+:root {
+  --main-color: #0ef;
+  --bg-color: #071a2b;
+  --text-color: #fff;
+}
+
+[data-theme="light"] {
+  --bg-color: #f9f9f9;
+  --text-color: #222;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* 
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+} */
+
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--main-color);
+}
+
+.skills-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.technical-skills,
+.professional-skills {
+  flex: 1;
+  min-width: 300px;
+}
+
+.tech-skill {
+
+  font-size: 25px;
+  text-align: left;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+
+.tech-skills {
+  font-size: 25px;
+  text-align: left;
+  margin-bottom: 20px;
+  text-decoration: underline;
+
+}
+
+/* 
+h3 {
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 20px;
+  text-decoration: underline;
+} */
+
+.skill {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Blue color for skills text */
+.skills-wrapper {
+  color: #0ef;
+}
+
+.highlight {
+  color: #0ef;
+}
+
+.skills-title {
+  font-size: 40px;
+  /* Adjust as needed: try 4rem, 48px, etc. */
+  font-weight: bold;
+  text-align: center;
+}
+
+.highlight {
+  color: #0ef;
+}
+
+
+.skill-name {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-bar {
+  height: 10px;
+  background: #111;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: var(--main-color);
+  box-shadow: 0 0 10px var(--main-color);
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+.technical-skills {
+  margin-right: 70px;
+}
+
+.professional-skills {
+  margin-left: 70px;
+}
+
+.circle-container {
+  display: grid;
+  grid-template-columns: repeat(2, 120px);
+  gap: 30px;
+  justify-content: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(var(--main-color) 0%, #222 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background 1.5s ease-in-out;
+}
+
+.circle::before {
+  content: attr(data-label);
+  position: absolute;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.circle span {
+  position: absolute;
+  bottom: -20px;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.circle {
+  background: conic-gradient(var(--main-color) 0%, #222 0%);
+}
+
+.circle::before {
+  transition: all 0.4s ease-in-out;
+}
+
+.circle span {
+  transition: color 0.4s ease-in-out;
+}
+
+/* Optional hover effect */
+.circle:hover span {
+  color: var(--main-color);
+}
+
+.circle {
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: conic-gradient(var(--main-color) 0%, #222 0%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: background 1.5s ease-in-out;
+}
+
+/* Create the inner circle to make the ring look thinner */
+.circle::after {
+  content: '';
+  position: absolute;
+  width: 70%;
+  /* Adjust this % for ring thickness */
+  height: 70%;
+  background-color: var(--bg-color);
+  /* Use the same as body background */
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Keep the percentage label above the inner circle */
+.circle::before {
+  content: attr(data-label);
+  position: absolute;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--text-color);
+  z-index: 2;
+}
+
+/* Skill name under the circle */
+.circle span {
+  position: absolute;
+  bottom: -20px;
+  font-size: 14px;
+  color: var(--text-color);
+  transition: color 0.4s ease-in-out;
+}
+
+/* projects */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0c1c2c;
+  color: white;
+}
+.project-heading {
+  text-align: center;
+  font-size: 30px; /* Increased from 2.5rem */
+  font-weight: 800;
+  margin: 60px 0 30px;
+  color: white;
+}
+
+.project-heading span {
+  color: #00f0ff;
+}
+
+/* 
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 40px;
+}  */
+
+h4 span {
+  color: #00f0ff;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.project-card:hover .project-info {
+  opacity: 1;
+}
+
+.project-info h3 {
+  color: #00f0ff;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.view-btn {
+  padding: 8px 16px;
+  background-color: #00f0ff;
+  border: none;
+  border-radius: 20px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.view-btn:hover {
+  background-color: #00c8e0;
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #1a1a2e;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.modal-content h3 {
+  color: #00f0ff;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  color: #ccc;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+} 
+
+/* Contact */
+/* contact.css */
+#contact {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #0a192f, #101c2e);
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+}
+
+.contact-left h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.contact-left h2 span {
+  color: #00f0ff;
+}
+
+.contact-left h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-left p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.contact-info i {
+  color: #00f0ff;
+  margin-right: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 12px;
+  color: #00f0ff;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+.social-icons a {
+  display: inline-block;
+  margin-right: 12px;
+  color: #0ef;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 240, 255, 0.1);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.9), 0 0 45px rgba(0, 240, 255, 0.6);
+}
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255, 255, 255, 0.07);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #ccc;
+}
+
+.contact-form button {
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, #00f0ff, #00c8e0);
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 20px #00f0ff;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(to right, #00c8e0, #00a0c0);
+}
+
+.contact {
+  padding: 60px 50px;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+  gap: 20px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #002233;
+  color: #fff;
+}
+
+.contact .btn {
+  background: cyan;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.section {
+  padding: 60px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  padding: 20px;
+  background: #1f1f1f;
+  border-radius: 10px;
+  min-width: 150px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.social-media a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 50%;
+  border: 2px solid #0ef;
+  color: #0ef;
+  font-size: 24px;
+  transition: 0.3s;
+  text-decoration: none;
+  background-color: transparent;
+  box-shadow: 0 0 10px transparent;
+}
+
+.social-media a:hover {
+  background-color: #0ef;
+  color: #000;
+  box-shadow: 0 0 15px #0ef;
+  border-color: #0ef;
+}
+
+.about-more a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  /* space between icon and text */
+  padding: 10px 20px;
+  border-radius: 999px;
+  /* pill shape */
+  border: 2px solid #0ef;
+  color: #0ef;
+  font-size: 18px;
+  transition: 0.3s;
+  text-decoration: none;
+  background-color: transparent;
+  box-shadow: 0 0 10px transparent;
+  margin-top: 20px;
+}
+
+.about-more a:hover {
+  background-color: #0ef;
+  color: #000;
+  box-shadow: 0 0 15px #0ef;
+  border-color: #0ef;
+}
+
+.about-more i {
+  font-size: 22px;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
